@@ -153,4 +153,4 @@ Since the data set is constantly updating, disregard the year 2021 and later for
 WITH ArrestRates AS ( SELECT EXTRACT(YEAR FROM date) AS Year, COUNT() AS TotalCrimes, SUM(CAST(arrest AS INT)) AS TotalArrests, ROUND((SUM(CAST(arrest AS INT)) * 100.0) / NULLIF(COUNT(), 0), 2) AS ArrestRate FROMbigquery-public-data.chicago_crime.crime GROUP BY Year ) SELECT Year, ArrestRate FROM ArrestRates ORDER BY Year; Q6
 
 ## conclusion
- fluctuations in crime rat
+ fluctuations in crime rate
